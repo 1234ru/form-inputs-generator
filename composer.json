@@ -1,0 +1,14 @@
+{
+  "name": "one234ru/form-inputs-generator",
+  "description": "Generation of HTML form fields with supplementary tags",
+  "minimum-stability": "stable",
+  "license": [ "GPL-3.0-or-later" ],
+  "autoload": {
+    "psr-4": {
+      "One234ru\\": "."
+    }
+  },
+  "require": {
+    "one234ru/html-input-generator": "*"
+  }
+}

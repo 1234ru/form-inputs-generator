@@ -1,0 +1,38 @@
+<label>
+	<input type="checkbox" name="something" value="1">
+	<span>Something</span>
+</label>
+
+<style>
+
+	label > input[type=checkbox] {
+		display: none;
+	}
+
+	label > input[type=checkbox] + span {
+		display: flex; /* very handy for vertical alignment */
+		align-items: flex-start;
+		cursor: pointer;
+	}
+
+	label > input[type=checkbox] + span::before {
+		content: "\00A0";
+		flex-shrink: 0; /* prevents squeezing by text */
+		min-width: 0;   /* prevents stretching inside of flex container */
+		box-sizing: border-box;
+		width: 1.25em;
+		height: 1.25em;
+		line-height: 1.1;
+		margin-right: .5em;
+		font-weight: bold;
+		background-color: white;
+		border: 1px solid;
+		border-radius: 2px;
+		text-align: center;
+	}
+
+	label > input[type=checkbox]:checked + span::before {
+		content: "\2713";
+	}
+
+</style>

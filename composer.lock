@@ -1,0 +1,88 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e9bb696c1b4ac6a66d8b5c19ab41f860",
+    "packages": [
+        {
+            "name": "one234ru/html-input-generator",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/1234ru/html-input-generator.git",
+                "reference": "80241c7ae7c1ce1b277e0e0bbd311da69eb53c54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/1234ru/html-input-generator/zipball/80241c7ae7c1ce1b277e0e0bbd311da69eb53c54",
+                "reference": "80241c7ae7c1ce1b277e0e0bbd311da69eb53c54",
+                "shasum": ""
+            },
+            "require": {
+                "one234ru/html-tag-generator": "*",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "One234ru\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "Generating code of single HTML form inputs using PHP.",
+            "support": {
+                "issues": "https://github.com/1234ru/html-input-generator/issues",
+                "source": "https://github.com/1234ru/html-input-generator/tree/v1.0.3"
+            },
+            "time": "2024-05-19T16:51:10+00:00"
+        },
+        {
+            "name": "one234ru/html-tag-generator",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/1234ru/html-tag-generator.git",
+                "reference": "e09f7b86d5471f1fae96eeb706f78058d4e33162"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/1234ru/html-tag-generator/zipball/e09f7b86d5471f1fae96eeb706f78058d4e33162",
+                "reference": "e09f7b86d5471f1fae96eeb706f78058d4e33162",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "One234ru\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": " PHP tool for generating code of HTML tags.",
+            "support": {
+                "issues": "https://github.com/1234ru/html-tag-generator/issues",
+                "source": "https://github.com/1234ru/html-tag-generator/tree/v1.0.3"
+            },
+            "time": "2024-05-19T16:46:56+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
