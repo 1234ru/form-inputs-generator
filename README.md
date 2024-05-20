@@ -3,7 +3,7 @@
 
 # Generation of HTML form fields with supplementary tags 
 
-This class is a wrapper for [`HTMLinputGenerator`](/one234ru/html-input-generator). It solves two important problems:
+This class is a wrapper for [`HTMLinputGenerator`](/1234ru/html-input-generator). It solves two important problems:
 
 1. Looks for field's value using it's name in an array.
 This array may store, for example, data of some entity being edited or parameters of an HTTP query.
