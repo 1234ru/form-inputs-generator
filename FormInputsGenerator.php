@@ -8,7 +8,71 @@ class FormInputsGenerator
 
     private $HTML;
 
+    /** @var = [
+     *  'type' => self::$typeDeclaration,
+     *  'name' => string,
+     *  'value' => '',
+     *  'attr' => self::$attrDeclaration,
+     *  'label' => self::$labelDeclaration,
+     *  'values' => [ self::$valuesItemDeclaration ],
+     *  'off_value' => 0,
+     *  'multiple' => bool, // for select
+     *  'options' => [ self::$optionDeclaration ],
+     *  'optgroups' => [ self::$optgroupDeclaration ],
+     * ]
+     */
     private $config;
+
+    /** @var = 'text checkbox radio textarea select file hidden submit reset'
+     */
+    private $typeDeclaration;
+
+    /** @var = [
+     * 'class' => '',
+     * 'placeholder' => 'A text hint in empty field',
+     * 'style' => 'CSS rules separated by ;',
+     * 'rows' => 'Rows in textarea',
+     * 'any-html-attribute' => '',
+     * ]
+     */
+    private $attrDeclaration;
+
+    /** @var = [
+     *  'text' => 'Text or HTML code',
+     *  'attr' => self::$attrDeclaration,
+     *  'text_wrapper' => [
+     *      'tag' => 'div',
+     *      'attr' => [
+     *      'class' => 'text-for-something'
+     *  ],
+     * ],
+     * ]
+     */
+    private $labelDeclaration;
+
+    /** @var = [
+     *  'value' => '',
+     *  'label' => self::$labelDeclaration,
+     * ]
+     */
+    private $valuesItemDeclaration;
+
+    /** @var = [
+     *  'value' => '',
+     *  'text' => 'Option text',
+     *  'attr' => self::$attrDeclaration
+     * ]
+     */
+    private $optionDeclaration;
+
+    /** @var = [
+     *  'attr' => [
+     *      'label' => 'Group header',
+     *  ],
+     *  'options' => [ self::$optionDeclaration ],
+     * ]
+     */
+    private $optgroupDeclaration;
 
     public function __construct(array $cfg, array $data_to_search_field_value_in)
     {
@@ -78,9 +142,9 @@ class FormInputsGenerator
 
     /**
      * @param array $cfg = [
-     *     'type' => 'checkbox|radio',
+     *     'type' => 'checkbox radio',
      *     'name' => string,
-     *     'off_value' => string|int,
+     *     'off_value' => string int,
      *     // 'label' => 'Text for span near checkbox/radio inside the label',
      *     'label' => [
      *      'attr' => [],
@@ -90,7 +154,7 @@ class FormInputsGenerator
      *      ],
      *     ],
      * ]
-     * @return array|mixed
+     * @return array mixed
      */
     private static function createAndWrapInputHTML($cfg, $value) :string {
         $html = strval(new HTMLinputGenerator($cfg, $value));
